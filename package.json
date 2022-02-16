@@ -1,0 +1,26 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "This is an application for a Tech Blog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohans14/Tech-Blog.git"
+  },
+  "author": "Yohans Getaneh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohans14/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/yohans14/Tech-Blog#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1"
+  }
+}
