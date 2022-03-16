@@ -1,0 +1,40 @@
+<br>
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+    Edit Post
+  </h2>
+  <form class="edit-post-form form-group">
+    <div>
+      <label for="post-title">Title</label>
+      <input class="form-control" type="text" id="post-title" name="post-title"  value="{{post.title}}" />
+    </div>
+    <div>
+      <label for="content">Content..</label>
+      <textarea id="content" class="form-control" name="content" value="{{post.content}}">{{post.content}}</textarea>
+    <div>
+      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+      |
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success" >Save Post</button>
+    <button  id="delete-post-btn" type="button" class="btn btn-danger">Delete post</button>
+  </form>
+</article>
+
+<form class="comment-form form-group">
+    <div>
+    <label for="formGroupExampleInput">Add Comment</label>
+    <textarea class="form-control" placeholder="Comment..." name="comment-body"></textarea>
+  </div>
+  <div>
+    <button class="btn btn-secondary" type="submit">Add Comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}}
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

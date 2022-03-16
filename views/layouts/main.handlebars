@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+		/>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="container">
+      <div class="wrapper">
+        <header class="container">
+          <nav class="navbar fixed-top navbar-dark bg-dark"> 
+              <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
+            {{#if loggedIn}}
+            <a class="h2" href="/dashboard">Dashboard</a>
+            <button id="logout" class="btn h2 btn-danger">logout</button>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
+          </nav>
+        </header>
+        <br>
+        <div class="">
+          <br>
+            <main>
+              {{{ body }}}
+            </main>
+        </div>
+        <br>
+        <footer class="">
+        Made with ❤️ by Yohans Getaneh 
+        </footer>
+
+      </div>
+
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</div>
+</body>
+
+</html>

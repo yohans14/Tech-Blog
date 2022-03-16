@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	color: rgb(48, 37, 37);
+}
+
+a {
+	text-decoration: none;
+	color: #406491;
+	font-weight: bold;
+	transition: color 0.1s;
+}
+
+a:hover {
+	color: #3486eb;
+}
+
+form > div {
+	margin-bottom: 2%;
+}
+
+form label {
+	display: block;
+}
+
+main {
+	flex: 1;
+	padding: 2% 4%;
+}
+
+.edit-link {
+	display: block;
+	margin: -1.5% 0 2% 0;
+}
+
+.comment:nth-child(odd) {
+	background-color: #fff5eb;
+}
+
+.comment .meta {
+	font-size: 90%;
+	margin-bottom: 0.5%;
+	opacity: 0.6;
+}
+
+footer {
+	/* border-top: 1px solid #ccc; */
+	display: flex;
+	justify-content: center;
+	padding: 1%;
+	font-size: 110%;
+	background-color: rgb(52 58 62);
+	color: cadetblue;
+}
+
+.nav-post {
+	justify-content: space-between;
+}
+
+.card-header {
+	background-color: rgb(52 58 62);
+}
+.card-body {
+	background-color: linen;
+}
+h2 {
+	color: rgb(64 99 144);
+}
