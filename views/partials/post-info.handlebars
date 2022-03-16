@@ -1,14 +1,23 @@
-    <article class="post">
-      <div class="title">
-          <a href="/post/{{id}}">{{title}}</a>
-      </div>
-      <div class="content">
-          <p>{{content}}</p>
-      </div>
+<br>
+<div class="card">
+    <div class="card-header">
+      <ul class="nav nav-post nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link " href="/post/{{id}}">{{title}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled small" href="/post/{{id}}">Posted by {{user.username}} on {{format_date created_at}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <p class="card-text content">{{content}}</p>
+      {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
       <div class="meta">
-        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on
-        {{format_date created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+          {{vote_count}} {{format_plural "Like" vote_count}} by {{user.username}} on
+          {{format_date created_at}}
+          |
+          <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
       </div>
-    </article>
+    </div>
+</div>

@@ -1,19 +1,19 @@
+<br>
 {{> post-info post}}
 
 {{#if loggedIn}}
- <form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+<br>
 
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+ <form class="comment-form form-group">
+   <div class="card">
+    <textarea class="form-control" placeholder="Comment..." name="comment-body"></textarea>
   </div>
+      <button type="button" class="btn btn-success btn-sm upvote-btn">Like</button>
+      <button type="submit" class="btn btn-primary btn-sm">Add Comment</button>
 </form>
 
 {{/if}}
-
+{{!-- <label for="formGroupExampleInput">Comment:</label> --}}
 {{> comments post.comments}}
 
 {{#if loggedIn}}

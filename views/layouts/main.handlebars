@@ -17,38 +17,41 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-        <h1>
-            <a href="/">Tech Blog</a>
-        </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+  <div class="container">
+      <div class="wrapper">
+        <header class="container">
+          <nav class="navbar fixed-top navbar-dark bg-dark"> 
+              <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
+            {{#if loggedIn}}
+            <a class="h2" href="/dashboard">Dashboard</a>
+            <button id="logout" class="btn h2 btn-danger">logout</button>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
+          </nav>
+        </header>
+        <br>
+        <div class="">
+          <br>
+            <main>
+              {{{ body }}}
+            </main>
+        </div>
+        <br>
+        <footer class="">
+        Made with ❤️ by Yohans Getaneh 
+        </footer>
 
-    <main>
-      {{{ body }}}
-    </main>
+      </div>
 
-    <footer>
-     Made with ❤️ by Yohans Getaneh 
-    </footer>
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
 
-  </div>
-
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</div>
 </body>
 
 </html>
