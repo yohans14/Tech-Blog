@@ -20,7 +20,7 @@ follow the url
 
 post your blog here
 
-[live URL](https://yohans14.github.io//)
+[live URL](https://immense-mountain-68759.herokuapp.com/)
 
 ## Snapshot
 
